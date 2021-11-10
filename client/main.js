@@ -5,7 +5,6 @@ function donutSelected(type) {
     donutsInCart++;
     order.push(type);
     console.log(order);
-    // document.getElementById('d' + donutsInCart).src='img/carrossel/carrossel-' + type + '.svg';
     displayDonuts();
 }
 
@@ -20,36 +19,22 @@ function donutDeselected(btn) {
     }
     console.log('H' , order);
     displayDonuts();
-    // document.getElementById('d' + btn).src='img/empty.svg';
-
-    // for(i = btn ; i < donutsInCart + 2 ; i++) {
-    //     if(order[i + 1] != undefined) {
-            
-    //     }
-    //     document.getElementById('d' + i).src='img/empty.svg';
-    // }
 }
 
 function donutHover(btn) {
-    // console.log(order)
-    // if(btn <= donutsInCart){
-    //     document.getElementById('d' + btn).src='img/xDonuts/xDonut-' + order[btn - 1] + '.svg';
-    // }
-    order[btn - 1] = order[btn - 1] * -1;
-    displayDonuts();
-    console.log(order);
+    if(btn < donutsInCart) {
+        order[btn - 1] = order[btn - 1] * -1;
+        displayDonuts();
+        console.log(order);
+    }
 }
 
 function donutUnhover(btn) {
-    // console.log(donutsInCart);
-    // console.log(btn);
-    // if(btn <= donutsInCart){
-    //     document.getElementById('d' + btn).src='img/carrossel/carrossel-' + order[btn - 1] + '.svg';
-    // }
-    //when first unhover cannot be negative
-    order[btn - 1] = Math.abs(order[btn - 1]);
-    displayDonuts();
-    console.log(order);
+    if(btn < donutsInCart) {
+        order[btn - 1] = Math.abs(order[btn - 1]);
+        displayDonuts();
+        console.log(order);
+    }
 }
 
 function displayDonuts() {

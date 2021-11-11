@@ -133,12 +133,22 @@
                     <img class=orderDonutImg id=d12 onmouseover="donutHover(12)" onmouseout="donutUnhover(12)"  onclick="donutDeselected(12)" src='img/empty.svg'>
                 </button>
             </div>
+            <button id='button1'> Test </button>
         </div>
         <a href="#ordering"><img src="img/BuyButton.svg" id="fixedbutton"></a>
     </main>
 
     <script src="main.js"></script>
     <script src="ImgScroll.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $('#button1').click(function(){
+            console.log('button clicked');
+            $.ajax({url: 'test1', success:function(res){
+                console.log('server response is', res);
+            }});
+        });
+    </script>
 </body>
 
 </html>

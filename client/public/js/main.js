@@ -58,3 +58,17 @@ function displayDonuts() {
 //         console.log('server response is', res);
 //     }});
 // });
+
+function placeOrder(order){
+    fetch('/index/order' ,{
+      method: 'post',
+      headers: {'Content-Type': 'application.json'},
+      body: order.toString()
+    }).then(function(res) {
+      if(res.status !== 200)
+      console.log("Error in prof Post: " + res.status + " message: " + res.value);
+      return;
+    });
+    console.log("Profession = " + prof);
+  }
+  

@@ -8,6 +8,12 @@ app.use(express.static('/Users/tommyburda/Documents/CodeProjects/Donut-Ordering-
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/index.html');
 });
+
+//var setUp = require('./main');
+
+app.route('/index/order')
+  .post(index.order)
+
 app.listen(3000);
 
 

@@ -3,7 +3,7 @@ var express = require('express'),
   http = require('http'),
   httpServer = http.Server(app);
 
-app.use(express.static('/Users/tommyburda/Documents/CodeProjects/Donut-Ordering-System/client'));
+
 
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/index.html');

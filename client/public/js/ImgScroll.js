@@ -10,8 +10,8 @@ let items = [... document.querySelectorAll('.slider-item')];
 let images = [... document.querySelectorAll('.img-div')];
 
 images.forEach((image , index) => {
-    console.log(`img/carrossel/carrossel-${index+1}.svg`)
-    image.style.backgroundImage = `url(img/carrossel/carrossel-${(index % 6) + 1}.svg)`
+    //console.log(`../public/img/carrossel/carrossel-${index+1}.svg`)
+    image.style.backgroundImage = `url(../public/img/carrossel/carrossel-${(index % 6) + 1}.svg)`
 })
 
 items.forEach(item => {

@@ -6,7 +6,7 @@ app.use(bodyParser.json({type: 'application/json'}));
 app.use(express.static('client/public'));
 
 app.get('/order', function(reqest, response){
-    response.sendFile('order-page.html' , {root: '../client/views'});
+    response.sendFile('order-page.html' , {root: './client/views'});
 })
 
 app.get('/landingPage', function(reqest, response){

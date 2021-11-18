@@ -41,13 +41,13 @@ function displayDonuts() {
     //order = [1 , 2 , 3 ,4 , 5 , 6 , 1 , 2 , 3 ,4 , 5 , 6]
     for(i = 0 ; i < 12 ; i++) {
         if(i >= order.length) {
-            document.getElementById('d' + (i + 1)).src='../public/img/empty.svg';
+            document.getElementById('d' + (i + 1)).src='/img/empty.svg';
         }
         else if(order[i] < 0) {
-            document.getElementById('d' + (i + 1)).src='../public/img/xDonuts/xDonut-' + (order[i] * -1) + '.svg';
+            document.getElementById('d' + (i + 1)).src='/img/xDonuts/xDonut-' + (order[i] * -1) + '.svg';
         }
         else {
-            document.getElementById('d' + (i + 1)).src='../public/img/carrossel/carrossel-' + order[i] + '.svg';
+            document.getElementById('d' + (i + 1)).src='/img/carrossel/carrossel-' + order[i] + '.svg';
         }
     }
 }
@@ -59,8 +59,8 @@ function displayDonuts() {
 //     }});
 // });
 
-function placeOrder(order){
-    fetch('/index/order' ,{
+function placeOrder(){
+    fetch('/api/order' ,{
       method: 'post',
       headers: {'Content-Type': 'application.json'},
       body: order.toString()
@@ -69,6 +69,6 @@ function placeOrder(order){
       console.log("Error in prof Post: " + res.status + " message: " + res.value);
       return;
     });
-    console.log("Profession = " + prof);
+    console.log('herere');
   }
   

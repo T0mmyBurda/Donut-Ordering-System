@@ -7,7 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Donuts!</title>
   <link rel="icon" href="/img/carrossel/carrossel-1.svg">
-  Bootstrap CSS
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" type = "text/css" href="/css/main.css" />
@@ -133,7 +132,7 @@
                     <img class=orderDonutImg id=d12 onmouseover="donutHover(12)" onmouseout="donutUnhover(12)"  onclick="donutDeselected(12)" src='/img/empty.svg'>
                 </button>
             </div>
-            <button id='button1'> Test </button>
+            <button id='button1' onclick="placeOrder()"> Test </button>
         </div>
         <a href="#ordering"><img src="/img/BuyButton.svg" id="fixedbutton"></a>
     </main>
@@ -141,14 +140,6 @@
     <script src="/js/ordering.js"></script>
     <script src="/js/ImgScroll.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $('#button1').click(function(){
-            console.log('button clicked');
-            $.ajax({url: 'test1', success:function(res){
-                console.log('server response is', res);
-            }});
-        });
-    </script>
 </body>
 
 </html>
